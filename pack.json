@@ -1,0 +1,37 @@
+{	  
+ 	  "name":"spark_templates", 
+ 	 	 
+ 	 "description":"templating components for sparkflow", 
+ 	 	 
+ 	 "version":"0.0.1", 
+ 	 	 
+ 	 "license":"mit", 
+ 	 	 
+ 	 "install_dir":"./packages", 
+ 	 	 
+ 	 "depends":{ 
+      "spark_templates":{ 
+        "type":"dartpath", 
+       "url":"."
+     }, 
+      "sparkflow":{ 
+        "type":"dartpath", 
+       "url":"../sparkflow"
+     }, 
+       
+     "hub":{ 
+        "type":"dartpath", 
+       "url":"../hub"
+     }, 
+       
+     "ds":{ 
+        "type":"dartpath", 
+       "url":"../ds"
+     }, 
+       
+     "streamable":{ 
+        "type":"dartpath", 
+       "url":"../streamable"
+     }
+ 	 } 
+}
