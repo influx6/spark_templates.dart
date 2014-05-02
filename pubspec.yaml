@@ -6,3 +6,6 @@ homepage: http://github.com/influx6/spark-elements.dart
 dependencies:
   hub: any
   sparkflow: any
+# dependency_overrides:
+#   sparkflow: 
+#       path: ../sparkflow

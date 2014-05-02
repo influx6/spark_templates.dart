@@ -4,14 +4,14 @@ import 'package:spark_templates/templates.dart';
 
 void main(){
 
-	Templates.registerComponents();
-  
-	var stringer = SparkRegistry.generate('templates/StringTemplate');
+  Templates.registerComponents();
 
-	stringer.port('static:option').send('i love #name!');
-	stringer.port('in:regexp').send('#name');
-	stringer.port('out:res').tap(print);
-	stringer.port('in:data').send('evelyn');
+  var stringer = SparkRegistry.generate('templates/StringTemplate');
+
+  stringer.port('static:option').send('i love #name!');
+  stringer.port('in:regexp').send('#name');
+  stringer.port('out:res').tap(print);
+  stringer.port('in:data').send('evelyn');
 
   var meta = SparkRegistry.generate('templates/metatemplate');
   meta.port('out:res').tap(print);
@@ -22,6 +22,7 @@ void main(){
   loop.port('out:res').tap(print);
   loop.port('in:tmpl').send('#index day of love');
   loop.port('in:data').send(6);
+  loop.port('in:data').send({'count':2});
 
   var collect = SparkRegistry.generate('templates/collectiontemplate');
   collect.port('out:res').tap(print);
